@@ -20,7 +20,7 @@ class StringLiteralExtractor:
         return self
 
     def dump(self, output_path):
-        with open(output_path, "w") as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             f.write(json.dumps(self.to_dict(), indent=2, ensure_ascii=False))
 
     def _extract(self, f):

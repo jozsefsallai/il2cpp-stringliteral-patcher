@@ -16,7 +16,7 @@ class StringLiteralPatcher:
         self.extractor.extract()
 
     def update(self):
-        with open(self.stringliteral_filepath, "r") as f:
+        with open(self.stringliteral_filepath, "r", encoding="utf-8") as f:
             self._populate_patched_stringliterals(f)
         self._update_extractor_data()
         return self
